@@ -73,7 +73,6 @@ def GetAudio(link):
 
 
 def GetVideos(tracks):
-
   youtube_data = []
 
   driver = webdriver.Chrome()
@@ -101,7 +100,7 @@ def GetVideos(tracks):
         title = searches[i].find_element(By.CSS_SELECTOR, '.title-and-badge.style-scope.ytd-video-renderer').text
         link = searches[i].find_element(By.CSS_SELECTOR, '.title-and-badge.style-scope.ytd-video-renderer a').get_attribute('href')
         views = searches[i].find_element(By.CSS_SELECTOR, '.style-scope.ytd-video-meta-block').text.split('\n')[0]
-        # length = searches[i].find_element(By.CSS_SELECTOR, '.style-scope.ytd-thumbnail-overlay-time-status-renderer').text
+
         found = True
 
         youtube_data.append({
@@ -128,7 +127,6 @@ def GetVideos(tracks):
   return youtube_data
 
 print(tracks)
-# query = tracks[0]['name'] + " - " + " ".join(tracks[0]['artists'])
 
 links = GetVideos(tracks)
 

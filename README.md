@@ -19,3 +19,13 @@ Currently under development. Please work on issues.
     ```
 
 4. You must also install FFmpeg to conver the audio files to .mp3 files. This is best done through the [wikihow tutorial](https://www.wikihow.com/Install-FFmpeg-on-Windows).
+
+## Contributors
+
+Select an issue and submit a pull request for review.
+
+When adding new packages, make sure to add them to the `requirements.txt` file via the command:
+
+```bash
+py -m pip freeze > requirements.txt
+```
