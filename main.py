@@ -78,7 +78,7 @@ def GetVideos(tracks):
       print('no button')
 
     list = driver.find_element(By.CSS_SELECTOR, '#contents.style-scope.ytd-item-section-renderer')
-    searches = list.find_elements(By.CSS_SELECTOR, '.style-scope.ytd-item-section-renderer')
+    searches = list.find_elements(By.TAG_NAME, 'ytd-video-renderer')
     found = False
     i = 0
 
